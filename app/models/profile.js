@@ -3,10 +3,9 @@
 var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
-var ObjectId = Schema.types.ObjectId; //auto assigned unique id
+var ObjectId = Schema.types.ObjectId; //auto assigned document id
 
 var ProfileStructure = new Schema({
-ProfileId: ObjectId,
 Name: {type: String, required: true, trim: true},
 Age : {type: Number, min: 18, max:180},
 Interest: String
