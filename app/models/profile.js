@@ -1,7 +1,6 @@
 /*Create a data model using Mongoose object modeling tool for MongoDB */
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://user:pass@novus.modulusmongo.net:27017/Pezib3ug');
 
 var Schema = mongoose.Schema;
 var ObjectId = Schema.types.ObjectId; //auto assigned document id
