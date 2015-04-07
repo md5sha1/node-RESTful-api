@@ -7,14 +7,14 @@ var app = express();
 
 //app configuration; app.configure() no longer needed
 app.use(logger('dev')); //logs to the console in dev format
-app.use(bodyParser.urlencoded({extended:false, limit:'200kb'}));//parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({extended:false, limit: '200kb'}));//parse application/x-www-form-urlencoded
 app.use(bodyParser.json());//parse application/json
 
 //Connect to the DB
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://user:pass@novus.modulusmongo.net:27017/Pezib3ug'); //connecting to the mongo DB from modulus
 
-var Profile = require('./api/models/profile'); //data model
+var Profile = require('./models/profile'); //data model
 
 //Initialize the Server
 var port = process.env.PORT || 9000;
