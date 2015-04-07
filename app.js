@@ -12,7 +12,7 @@ app.use(bodyParser.json());//parse application/json
 
 //Connect to the DB
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://user:pass@novus.modulusmongo.net:27017/Pezib3ug'); //connecting to the mongo DB from modulus
+mongoose.connect('mongodb://md5sha1:pass@novus.modulusmongo.net:27017/Pezib3ug'); //connecting to the mongo DB from modulus
 
 var Profile = require('./models/profile'); //data model
 
