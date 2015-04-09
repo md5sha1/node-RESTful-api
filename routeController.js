@@ -6,7 +6,7 @@ var router = express.Router(); //use the Router middleware
 var mapRoute= function(router, collection){
 
 var collection = '/' + collection;
-var collectionObj = require('./controller' + collection); //provides access to all collection router methods inside controller subdirectory, ie. /controller/profiles 
+var collectionObj = require('./controllers' + collection); //provides access to all collection router methods inside controller subdirectory, ie. /controller/profiles 
 
 router.route(collection)
 //list all
