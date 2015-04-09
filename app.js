@@ -2,7 +2,7 @@
 
 var express = require('express'); //express framework
 var main = require('./main');
-var map = require('./routeController');
+var routeController = require('./routeController');
 var logger = require ('morgan'); //http req logger middleware
 var bodyParser = require('body-parser'); //nodejs body parsing middleware
 var app = express();
