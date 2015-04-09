@@ -2,7 +2,7 @@
 
 var express = require('express'); //express framework
 var main = require('./main');
-var map = require('./controller/router');
+var map = require('./routeController');
 var logger = require ('morgan'); //http req logger middleware
 var bodyParser = require('body-parser'); //nodejs body parsing middleware
 var app = express();
@@ -33,8 +33,12 @@ next();
 router.get('/', main.index);
 app.use('/api', router); // use the router prefixed w/api for all requests
 
-//map route to Profile controller object
-map.mapRoute(router, profile);
+//DB Collections
+var collections = ['profiles']; //we can add more collections to this array in future if needed for routing
+//map the collections to appropriate route controller object
+collections.forEach(function(collection){
+routeController.mapRoute(router, collection);
+});
 
 //Initialize the Server
 var port = process.env.PORT || 9000;
