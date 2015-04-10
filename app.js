@@ -31,11 +31,11 @@ next();
 });
 app.use('/api', router); // use the router prefixed w/api for all requests
 
-//DB Collections
-var collections = ['profiles']; //we can add more collections to this array in future if needed for routing
-//map the collections to appropriate route controller object
-collections.forEach(function(collection){
-routeController.mapRoute(router, collection);
+
+var mapObjects = ['profiles']; //we can add more object files to this array in future if needed for routing
+//map the controller object to appropriate route 
+mapObjects.forEach(function(mapObj){
+routeController.mapRoute(router, mapObj);
 });
 
 //Initialize the Server
