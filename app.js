@@ -29,7 +29,7 @@ router.use(function(req, res, next){
 console.log('Router ready to take client requests: ' + Date.now());
 next();
 });
-app.use('/api', router); // use the router prefixed w/api for all requests
+app.use('/api', router); // use the router prefixed with /api/* for all requests
 
 
 var mapObjects = ['profiles']; //we can add more object files to this array in future if needed for routing
