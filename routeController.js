@@ -12,12 +12,12 @@ router.route(collection)
 //list all
 		.get(collectionObj.index)
 //create
-		.post(collection + '/create', collectionObj.create)
+		.post('/create', collectionObj.create)
 //show by id
-		.get(collection + '/:id', collectionObj.show)
+		.get('/:id', collectionObj.show)
 //update
-		.put(collection + '/:id', collectionObj.update)
+		.put('/:id', collectionObj.update)
 //delete
-		.delete(collection + '/:id', collectionObj.destroy);
+		.delete('/:id', collectionObj.destroy);
 };
 module.exports.mapRoute = mapRoute;
