@@ -34,15 +34,13 @@ exports.show = function(req, res){
 };
 //update a profile
 exports.update = function(req, res){
-			Profile.findById(req.params.Id, function(err, profile){
+			Profile.findById(req.params.id, function(err, profile){
 						if(err)
 							res.send(err);
-					profile= {
-						name: req.body.name,
-						age: req.body.age,
-						interest: req.body.interest
-					};
-			profile.update(function(err){
+			profile.name = req.body.name;
+			profile.age = req.body.age;
+			profile.interest = req.body.interest;
+			profile.save(function(err){
 					if(err)
 						res.send(err);
 					res.json({msg:'profile has been updated'});

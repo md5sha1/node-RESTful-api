@@ -16,7 +16,7 @@ var mongoose = require('mongoose');
 var db = mongoose.connection;
 db.on('error', console.error);
 db.on('open', function(){
-console.log('Connected to the remote DB ' + Date.now());
+console.log('Connected to the remote DB: ' + Date.now());
 var Profile = require('./models/profile');
 //use the Profile constructor to create instances of profiles documents in MongoDB 
 });
@@ -30,7 +30,9 @@ console.log('Router ready to take client requests: ' + Date.now());
 next();
 });
 app.use('/api', router); // use the router prefixed with /api/* for all requests
-
+//test the router; top level view page can also be accessed from here
+router.get('/', function(req, res){res.json({msg: 'Router functional: use /api/objName/ path for http operations'});
+});
 
 var mapObjects = ['profiles']; //we can add more object files to this array in future if needed for routing
 //map the controller object to appropriate route 
@@ -40,7 +42,9 @@ routeController.mapRoute(router, mapObj);
 
 //Initialize the Server
 var port = process.env.PORT || 9000;
-app.listen(port, function(){console.log('Express server initialized on port: ' +  port)});
+app.listen(port, function(){console.log('Express server initialized on port: ' +  port);
+			    console.log('http access url: localhost:'+port+'/api');
+			});
 
 
 
