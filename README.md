@@ -27,7 +27,7 @@ We havn't implemented any Views in the api since we will be testing the app in J
 - Now initialize the server: node app.js
 
 ## API Tests 
-'Test the app using a Web REST client such as [POSTMAN](https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm?hl=en).` 
+`Test the app using a Web REST client such as [POSTMAN](https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm?hl=en).` 
 - Assuming we are using a localhost on port 9000,
   1. To test successful connection, use url, localhost:9000/api/
   2. To CREATE a profile record, use url: localhost:9000/api/profiles/create (Select POST, and enctype: x-www-form-urlencoded)
