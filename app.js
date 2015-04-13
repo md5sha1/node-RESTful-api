@@ -20,7 +20,7 @@ console.log('Connected to the remote DB: ' + Date.now());
 var Profile = require('./models/profile');
 //use the Profile constructor to create instances of profiles documents in MongoDB 
 });
-mongoose.connect('mongodb://md5sha1:pass@novus.modulusmongo.net:27017/Pezib3ug'); //connecting to the mongo DB from modulus
+mongoose.connect('mongodb://restfool:node@novus.modulusmongo.net:27017/Pezib3ug'); //connecting to the mongo DB from modulus
 
 var router = express.Router(); //uses the Router middleware object
 
