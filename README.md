@@ -28,10 +28,10 @@ We havn't implemented any Views in the api since we will be testing the app in J
 
 ## API Tests 
 'Test the app using a Web REST client such as [POSTMAN](https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm?hl=en).` 
-'Assuming we are using a localhost on port 9000,'
-1. To test successful connection, use url, localhost:9000/api/
-2. To CREATE a profile record, use url: localhost:9000/api/profiles/create (Select POST, and enctype: x-www-form-urlencoded)
-3. To SHOW all the profiles, use url: localhost:9000/api/profiles (GET)
-4. To GET a profile with single id: localhost:9000/api/profiles/id
-5. To DESTROY a profile: localhost:9000/api/profiles/id (DELETE)
-6. To UPDATE a profile: localhost:9000/api/profiles/id (PUT)
+- Assuming we are using a localhost on port 9000,
+  1. To test successful connection, use url, localhost:9000/api/
+  2. To CREATE a profile record, use url: localhost:9000/api/profiles/create (Select POST, and enctype: x-www-form-urlencoded)
+  3. To SHOW all the profiles, use url: localhost:9000/api/profiles (GET)
+  4. To GET a profile with single id: localhost:9000/api/profiles/id
+  5. To DESTROY a profile: localhost:9000/api/profiles/id (DELETE)
+  6. To UPDATE a profile: localhost:9000/api/profiles/id (PUT)
